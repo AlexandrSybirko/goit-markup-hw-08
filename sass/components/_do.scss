@@ -1,41 +1,41 @@
-.work {
-  display: flex;
-  align-items: center;
+// .work {
+//   // display: flex;
+//   // align-items: center;
 
-  & .item:not(:last-child) {
-    margin-right: 30px;
-  }
+//   // & .item:not(:last-child) {
+//   //   margin-right: 30px;
+//   // }
 
-  @extend %list;
-}
+//   @extend %list;
+// }
 
-.do {
-  position: relative;
-}
+// .do {
+//   position: relative;
+// }
 
-.link {
-  display: flex;
-  width: 370px;
-  height: 70px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  align-items: center;
-  justify-content: center;
+// .link {
+//   // display: flex;
+//   width: 370px;
+//   height: 70px;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   // align-items: center;
+//   // justify-content: center;
 
-  color: $quartenarycolor;
-  background-color: rgba(47, 48, 58, 0.8);
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
+//   color: $quartenarycolor;
+//   background-color: rgba(47, 48, 58, 0.8);
+//   font-weight: bold;
+//   font-size: 14px;
+//   line-height: 1.14;
 
-  text-transform: uppercase;
-  text-decoration: none;
+//   text-transform: uppercase;
+//   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: $ternarycolor;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     color: $ternarycolor;
+//   }
+// }
