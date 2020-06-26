@@ -1,0 +1,20 @@
+.advantages {
+  display: flex;
+  align-items: center;
+
+  & .item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  @extend %list;
+}
+
+.img-small {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: $bgcolor;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,36 @@
+.list-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 50px;
+
+  & .item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @extend %list;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
+
+  color: $primerycolor;
+  background-color: $bgcolor;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $quartenarycolor;
+    background-color: $ternarycolor;
+  }
+}
