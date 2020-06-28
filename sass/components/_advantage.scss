@@ -1,11 +1,6 @@
 .advantages {
   @extend %list;
 
-  //   @media screen and (min-width: 480px) {
-  //     width: 450px;
-  //     height: 120px;
-  //   }
-
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -31,6 +26,12 @@
       margin-right: 30px;
     }
   }
+
+  @media screen and (max-width: 1199px) {
+    & .item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .img-small {
@@ -41,4 +42,10 @@
   background-color: $bgcolor;
   justify-content: center;
   align-items: center;
+}
+
+.advantages-titles {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
