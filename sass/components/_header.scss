@@ -9,6 +9,14 @@
   justify-content: space-between;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+
+    .menu {
+      margin-left: auto;
+    }
+  }
 }
 
 .menu {
@@ -22,6 +30,11 @@
     padding-bottom: 60px;
     background-color: $quartenarycolor;
     text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -78,19 +91,20 @@
 }
 
 .header-listf {
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
 
-  & .item {
-    margin-top: 40px;
-  }
+    & .item {
+      margin-top: 40px;
+    }
 
-  & .item:first-child {
-    margin-top: 0;
+    & .item:first-child {
+      margin-top: 0;
+    }
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-left: 86px;
 
     & .item:not(:last-child) {
       margin-right: 50px;
@@ -101,28 +115,28 @@
 }
 
 .header-lists {
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   margin-left: auto;
-  //   align-items: center;
+  @media screen and (max-width: 767px) {
+    & .item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
 
-  //   & .item:not(:last-child) {
-  //     margin-right: 30px;
-  //   }
-  // }
-  & .item:not(:last-child) {
-    margin-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 84px;
+    & .item:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   @extend %list;
 }
 
 .link-navs {
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
   margin: 0px;
   color: $secondarycolor;
   font-weight: 500;
@@ -146,12 +160,6 @@
 }
 .HHH:hover svg {
   fill: $ternarycolor;
-}
-
-.page-header {
-  @media screen and (max-width: 767px) {
-    position: relative;
-  }
 }
 
 .header-menu {
