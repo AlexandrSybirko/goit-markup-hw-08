@@ -12,19 +12,22 @@
 }
 
 .menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: $quartenarycolor;
-  text-align: center;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $quartenarycolor;
+    text-align: center;
+  }
 }
 
 .link-navf {
   position: relative;
-  //   padding-top: 32px;
+
   padding-bottom: 8px;
   color: $primerycolor;
   font-weight: 500;
@@ -45,6 +48,11 @@
 
   &.current {
     color: $ternarycolor;
+  }
+
+  @media screen and (min-width: 767px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   &::after {
@@ -70,14 +78,6 @@
 }
 
 .header-listf {
-  //   @media screen and (min-width: 768px) {
-  //     display: flex;
-  //     margin-left: 86px;
-
-  //     & .item:not(:last-child) {
-  //       margin-right: 50px;
-  //     }
-
   margin-bottom: 60px;
 
   & .item {
@@ -88,81 +88,93 @@
     margin-top: 0;
   }
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 86px;
+
+    & .item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
   @extend %list;
 }
 
-// .link-navs {
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     align-items: center;
-//   }
+.header-lists {
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   margin-left: auto;
+  //   align-items: center;
 
-//   margin: 0px;
-//   color: $secondarycolor;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   text-decoration: none;
+  //   & .item:not(:last-child) {
+  //     margin-right: 30px;
+  //   }
+  // }
+  & .item:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %list;
+}
 
-//   & .header-icon {
-//     margin-right: 10px;
-//     fill: $secondarycolor;
+.link-navs {
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   align-items: center;
+  // }
 
-//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   }
-// }
+  margin: 0px;
+  color: $secondarycolor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 
-// .HHH:hover a {
-//   color: $ternarycolor;
-// }
-// .HHH:hover svg {
-//   fill: $ternarycolor;
-// }
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-// .header-lists {
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     margin-left: auto;
-//     align-items: center;
+  & .header-icon {
+    margin-right: 10px;
+    fill: $secondarycolor;
 
-//     & .item:not(:last-child) {
-//       margin-right: 30px;
-//     }
-//   }
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 
-//   @extend %list;
-// }
+.HHH:hover a {
+  color: $ternarycolor;
+}
+.HHH:hover svg {
+  fill: $ternarycolor;
+}
 
-// .page-header {
-//   @media screen and (max-width: 767px) {
-//     position: relative;
-//   }
-// }
+.page-header {
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+}
 
-// .header-menu {
-//   @media screen and (min-width: 768px) {
-//     display: none;
-//   }
-//   display: inline-flex;
-//   margin: 0;
-//   padding: 0;
-//   border: none;
-//   background-color: transparent;
+.header-menu {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 
-//   & .icon-close {
-//     display: none;
-//   }
-// }
+  & .icon-close {
+    display: none;
+  }
+}
 
-// .header-menu.is-open {
-//   & .icon-close {
-//     display: block;
-//   }
+.header-menu.is-open {
+  & .icon-close {
+    display: block;
+  }
 
-//   & .icon-menu {
-//     display: none;
-//   }
-// }
+  & .icon-menu {
+    display: none;
+  }
+}
