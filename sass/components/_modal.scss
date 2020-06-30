@@ -8,6 +8,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -24,14 +25,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(360deg) scale(1);
-  width: 528px;
-  height: 581px;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: $quartenarycolor;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-paragraph {
@@ -132,6 +141,16 @@
 
 .form-checkbox-link {
   color: $ternarycolor;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.71;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.72;
+  }
 }
 
 .form-texterea {
@@ -199,10 +218,18 @@
 .form-label-checkbox {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
 
   color: $secondarycolor;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.71;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.72;
+  }
 }
 
 .form-input-checkbox {
@@ -211,15 +238,17 @@
 .form-label-checkbox::before {
   content: '';
   display: inline-block;
-  margin-right: 8.48px;
-  width: 15.9px;
+  margin-right: 5px;
+  width: 16px;
   height: 15px;
 
   background-color: $quartenarycolor;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  border: 2px solid $primerycolor;
+
+  border-radius: 2px;
+  border: 0.2px solid $primerycolor;
+  @media screen and (min-width: 1200px) {
+    margin-right: 8px;
+  }
 }
 
 .form-input-checkbox:checked + .form-label-checkbox::before {
