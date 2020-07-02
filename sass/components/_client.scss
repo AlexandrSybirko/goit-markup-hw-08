@@ -1,32 +1,52 @@
-// .client {
-//   display: flex;
-//   align-items: center;
+.client {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: -15px;
 
-//   & .item:not(:last-child) {
-//     margin-right: 30px;
-//   }
+  @media screen and (max-width: 767px) {
+    & .item {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+  }
 
-//   @extend %list;
-// }
+  @media screen and (max-width: 1199px) {
+    & .item {
+      width: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & .item {
+      width: calc((100% - 6 * 30px) / 6);
+      margin: 15px;
+    }
+  }
 
-// .client-logo {
-//   display: flex;
-//   width: 170px;
-//   height: 90px;
-//   border: 1px solid #afb1b8;
+  @extend %list;
+}
 
-//   border-radius: 4px;
-//   background-color: $quartenarycolor;
-//   justify-content: center;
-//   align-items: center;
-//   fill: #afb1b8;
+.client-logo {
+  display: flex;
 
-//   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-//     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 90px;
 
-//   &:hover,
-//   &:focus {
-//     border: solid $ternarycolor;
-//     fill: $ternarycolor;
-//   }
-// }
+  border: 1px solid #afb1b8;
+
+  border-radius: 4px;
+  background-color: $quartenarycolor;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: solid $ternarycolor;
+    fill: $ternarycolor;
+  }
+}
