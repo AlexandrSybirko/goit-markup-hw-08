@@ -295,7 +295,22 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
+  .list-comanda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+  .list-comanda .link-comanda {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .list-comanda {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -305,12 +320,6 @@ body {
   }
   .list-comanda .link-comanda:not(:last-child) {
     margin-right: 30px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .list-comanda .link-comanda:nth-child(-n + 2) {
-    margin-bottom: 30px;
   }
 }
 
@@ -1042,18 +1051,18 @@ footer {
 
 .footer-main {
   display: inline-block;
-  text-align: center;
+  width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
-  .footer-main .footer-item:not(:last-child) {
-    margin-bottom: 60px;
+@media screen and (max-width: 1200px) {
+  .footer-main {
+    text-align: center;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer-main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1061,8 +1070,6 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 48px;
-    padding-bottom: 28px;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1070,8 +1077,52 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .footer-main .footer-item-second:not(:last-child) {
+}
+
+@media screen and (max-width: 767px) {
+  .footer-left {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-center {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-center {
+    margin-left: 69px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-riht {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-riht {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -1114,13 +1165,34 @@ footer {
   margin-right: 10px;
 }
 
-.footer-form {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .footer-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .footer-form-input {
@@ -1135,10 +1207,31 @@ footer {
   outline: none;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-form-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form-input {
+    margin-bottom: 0px;
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+
 .footer-form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
   font-style: normal;
