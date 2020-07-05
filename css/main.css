@@ -1356,13 +1356,22 @@ footer {
           justify-content: first baseline;
 }
 
+.list-button .item:nth-child(-n + 5) {
+  margin-bottom: 15px;
+}
+
 .list-button .item:not(:last-child) {
   margin-right: 8px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
+  .list-button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .list-button .item:nth-child(-n + 5) {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
 }
 
