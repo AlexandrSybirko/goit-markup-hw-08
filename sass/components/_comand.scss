@@ -65,8 +65,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding-bottom: 24px;
+  margin: -5px;
+
+  & .item {
+    width: calc((100% - 4 * 10px) / 4);
+    margin: 5px;
+  }
+
+  @media screen and (max-width: 479px) {
+    padding-left: 122px;
+    padding-right: 122px;
+  }
 
   @media screen and (min-width: 480px) {
     padding-left: 122px;
@@ -82,15 +92,11 @@
     padding-right: 32px;
   }
 
-  & .item:not(:last-child) {
-    margin-right: 10px;
-  }
-
   @extend %list;
 }
 
 .social-item {
-  display: flex;
+  display: inline-block;
   width: 44px;
   height: 44px;
   align-items: center;
